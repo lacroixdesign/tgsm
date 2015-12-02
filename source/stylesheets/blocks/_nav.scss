@@ -9,7 +9,11 @@
 
   a {
     color: white;
-  }
+
+    &:hover { color: color(primary, lighter); }
+
+    &:active { color: color(primary, light); }
+  } // a
 
   ul {
     padding: 0;
