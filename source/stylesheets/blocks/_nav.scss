@@ -1,0 +1,25 @@
+.b-Nav {
+  float: right;
+  padding-top: 1em;
+  font-family: font(condensed);
+  font-size: 1.5em;
+  font-weight: weight(semibold);
+  text-align: right;
+  text-transform: uppercase;
+
+  a {
+    color: white;
+  }
+
+  ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  li {
+    display: inline-block;
+    padding-left: 1em;
+  }
+
+} // .b-Nav

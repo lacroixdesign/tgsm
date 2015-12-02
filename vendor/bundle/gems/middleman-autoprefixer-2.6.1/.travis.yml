@@ -1,0 +1,11 @@
+language: ruby
+rvm:
+  - 2.1
+  - 2.2
+script:
+  - bundle exec rake test
+  - bundle exec rake install
+sudo: false
+cache: bundler
+matrix:
+  fast_finish: true

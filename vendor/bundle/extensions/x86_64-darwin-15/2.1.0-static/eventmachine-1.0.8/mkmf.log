@@ -1,0 +1,11 @@
+"/usr/bin/cc -o conftest -I/opt/rubies/2.1.5/include/ruby-2.1.0/x86_64-darwin15.0 -I/opt/rubies/2.1.5/include/ruby-2.1.0/ruby/backward -I/opt/rubies/2.1.5/include/ruby-2.1.0 -I. -I/opt/boxen/homebrew/opt/openssl/include -I/opt/boxen/homebrew/include -march=core2 -O3 -O3 -Wno-error=shorten-64-to-32  -pipe conftest.c  -L. -L/opt/rubies/2.1.5/lib -L. -L/opt/rubies/2.1.5/lib -L/opt/boxen/homebrew/lib -fstack-protector     -lruby-static -framework CoreFoundation  -lpthread -ldl -lobjc "
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: int main(int argc, char **argv)
+4: {
+5:   return 0;
+6: }
+/* end */
+

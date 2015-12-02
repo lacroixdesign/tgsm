@@ -1,0 +1,5 @@
+$(function() {
+
+	$('.swipebox-video').swipebox();
+
+});

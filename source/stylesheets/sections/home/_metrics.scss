@@ -1,0 +1,56 @@
+.s-HomeMetrics {
+  padding: layout(section-padding) layout(gutter);
+  background: color(white, dark);
+
+  h2 {
+    margin-bottom: 0;
+  }
+
+  .s-HomeMetrics__Highlights {
+    @include row;
+  }
+
+  .s-HomeMetrics__Percentage {
+    position: relative;
+    padding: 0.25em 0;
+    margin-bottom: 0.25em;
+    background: color(secondary, base);
+    color: color(white, base);
+    font-family: font(condensed);
+    font-size: 8em;
+    font-weight: weight(semibold);
+
+    &:after {
+      position: absolute;
+      top: 100%;
+      right: 0;
+      left: 0;
+      width: 0;
+      height: 0;
+      margin: 0 auto;
+      border-top: solid 0.25em color(secondary, base);
+      border-right: solid 0.25em transparent;
+      border-left: solid 0.25em transparent;
+      content: '';
+    }
+  }
+
+  .s-HomeMetrics__IndividualHighlight {
+    padding-bottom: 2em;
+  }
+
+  h4 {
+    margin-bottom: 0;
+    font-size: 1.5em;
+  }
+
+  @include media(800px) {
+
+    .s-HomeMetrics__IndividualHighlight {
+      @include span-columns(4);
+      @include omega(3n);
+      padding-bottom: 0;
+    }
+  }
+
+} // .s-HomeMetrics

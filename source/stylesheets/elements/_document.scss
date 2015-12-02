@@ -1,0 +1,16 @@
+body {
+  color: color(black);
+  font-family: font(sans);
+  font-weight: weight(normal);
+  -webkit-font-smoothing: antialiased !important;
+  -moz-osx-font-smoothing: grayscale !important
+}
+
+a {
+  color: color(primary);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}

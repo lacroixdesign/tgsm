@@ -1,0 +1,32 @@
+.s-HomeContact {
+  padding: layout(section-padding) layout(gutter);
+
+  .s-HomeContact__Form {
+    width: 100%;
+    max-width: 600px;
+  }
+
+  input,
+  textarea {
+    width: 100%;
+  }
+
+  label {
+    text-align: left;
+  }
+
+  button {
+    width: 100%;
+  }
+
+  @include media(1200px) {
+    @include row;
+
+    .s-HomeContact__Form {
+      @include span-columns(4);
+      @include shift(4);
+      max-width: none;
+    }
+  } // @include media(800px)
+
+} // .s-HomeContact

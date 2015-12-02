@@ -1,0 +1,24 @@
+.s-HomeAbout {
+  padding: layout(section-padding) layout(gutter);
+
+  h3,
+  p {
+    font-size: 1.25em;
+  }
+
+  .s-HomeAbout__Content {
+    max-width: 800px;
+    margin: auto;
+  }
+
+  @include media(1200px) {
+    @include row;
+
+    .s-HomeAbout__Content {
+      @include span-columns(8);
+      @include shift(2);
+      max-width: none;
+    }
+  } // @include media(800px)
+
+} // .s-HomeAbout

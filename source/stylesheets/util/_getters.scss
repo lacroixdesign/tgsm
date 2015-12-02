@@ -1,0 +1,83 @@
+@function font($stack) {
+  @if map-has-key($FONTS, $stack) {
+    @return #{map-get($FONTS, $stack)};
+  }
+
+  @warn "Unknown `#{$stack}` in $FONTS.";
+  @return null;
+}
+
+
+@function weight($key) {
+  @if map-has-key($WEIGHTS, $key) {
+    @return map-get($WEIGHTS, $key);
+  }
+
+  @warn "Unknown `#{$key}` in $WEIGHTS.";
+  @return null;
+}
+
+
+@function layout($key) {
+  @if map-has-key($LAYOUTS, $key) {
+    @return map-get($LAYOUTS, $key);
+  }
+
+  @warn "Unknown `#{$key}` in $LAYOUTS.";
+  @return null;
+}
+
+
+@function breakpoint($key) {
+  @if map-has-key($BREAKPOINTS, $key) {
+    @return map-get($BREAKPOINTS, $key);
+  }
+
+  @warn "Unknown `#{$key}` in $BREAKPOINTS.";
+  @return null;
+}
+
+
+@function border($key) {
+  @if map-has-key($BORDERS, $key) {
+    @return map-get($BORDERS, $key);
+  }
+
+  @warn "Unknown `#{$key}` in $BORDERS.";
+  @return null;
+}
+
+
+@function color($palette, $shade: base, $alpha: 1) {
+  @if map-has-key($COLORS, $palette) {
+    $color_map: map-get($COLORS, $palette);
+
+    @if map-has-key($color_map, $shade) {
+      $color: map-get($color_map, $shade);
+      @return rgba($color, $alpha);
+    }
+
+    @warn "Unknown shade `#{$shade}` in $COLORS[#{$palette}].";
+    @return null;
+  }
+
+  @warn "Unknown color `#{$palette}` in $COLORS.";
+  @return null;
+}
+
+
+@function image($image, $size: 1x) {
+  @if map-has-key($DATA_URIS, $image) {
+    $image_map: map-get($DATA_URIS, $image);
+
+    @if map-has-key($image_map, $size) {
+      @return map-get($image_map, $size);
+    }
+
+    @warn "Unknown size `#{$size}` in $DATA_URIS[#{$palette}].";
+    @return null;
+  }
+
+  @warn "Unknown iamge `#{$image}` in $DATA_URIS.";
+  @return null;
+}

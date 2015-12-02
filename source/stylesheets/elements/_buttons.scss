@@ -1,0 +1,136 @@
+/*
+ * Button factory
+ *---------------------------------------------------------*/
+
+@mixin btn-factory($bg, $bg-hover: false, $bg-active: false, $text: false) {
+  $text     : if($text, $text, color(white));
+  $bg-hover : if($bg-hover, $bg-hover, darken($bg, 10));
+  $bg-active: if($bg-active, $bg-active, darken($bg, 15));
+
+  background: $bg;
+  color: $text;
+
+  &:link,
+  &:focus,
+  &:active,
+  &:visited {
+    color: $text;
+  }
+
+  &:hover {
+    background: $bg-hover;
+    color: $text;
+  }
+
+  &:active {
+    background: $bg-active;
+    color: $text;
+  }
+
+  &.Link {
+    background: transparent;
+    color: $bg;
+
+    &:hover {
+      background: transparent;
+      color: $bg-hover;
+      text-decoration: underline;
+    }
+
+    &:active {
+      background: transparent;
+      color: $bg-active;
+      text-decoration: underline;
+    }
+  }
+}
+
+/*
+ * Buttons
+ *---------------------------------------------------------*/
+
+.Button {
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  padding: 0.25em 0.75em;
+  margin: 0.25em 0;
+  border: 0;
+  border-radius: border(radius);
+  box-shadow: none;
+  font-family: font(condensed);
+  font-size: 1em;
+  font-weight: weight(semibold);
+  font-style: normal;
+  line-height: normal;
+  text-align: center;
+  text-decoration: none;
+  text-rendering: optimizelegibility;
+  text-shadow: none;
+  text-transform: uppercase;
+  word-wrap: break-word;
+  vertical-align: middle;
+  cursor: pointer;
+  appearance: none;
+  user-select: none;
+
+  @include btn-factory(color(secondary));
+
+  &:hover {
+    text-decoration: none;
+  }
+
+  &:focus,
+  &:active {
+    box-shadow: 0 0 3px 2px color(primary, base, 0.7);
+    outline: none;
+  }
+
+  &.disabled,
+  &[disabled],
+  &[disabled]:hover,
+  &[disabled]:active {
+    cursor: default;
+    opacity: 0.5;
+  }
+
+  &.Large {
+    font-size: 2em;
+  }
+
+  &.Pill,
+  &.Small {
+    font-size: 0.875em;
+  }
+
+  &.Pill {
+    padding: 0.375em 1.25em;
+    border-radius: 500px;
+  }
+
+  &.Plain { @include btn-factory(color(black, light)); }
+  &.Primary { @include btn-factory(color(primary)); }
+  &.Success { @include btn-factory(color(success)); }
+  &.Danger { @include btn-factory(color(error)); }
+  &.Warn { @include btn-factory(color(warn), $text: color(black)); }
+
+  &.Fit {
+    width: 100%;
+  }
+
+  .Icon.Left { margin-right: 0.25em; }
+  .Icon.Right { margin-left: 0.25em; }
+}
+
+
+.ButtonReset {
+  border: 0;
+  background: transparent;
+  appearance: none;
+}
+
+
+button:focus {
+  box-shadow: 0 0 3px 2px color(primary, base, 0.7);
+  outline: none;
+}

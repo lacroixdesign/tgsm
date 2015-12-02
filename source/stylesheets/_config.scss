@@ -1,0 +1,78 @@
+$FONTS: (
+  sans: "'acumin-pro', 'Helvetica Neue', Helvetica, Arial, sans-serif sans-serif",
+  condensed: "'acumin-pro-extra-condensed', Impact, Haettenschweiler, 'Arial Black', sans-serif",
+);
+
+$WEIGHTS: (
+  normal: 400,
+  bold: 700,
+  semibold: 600,
+  black: 800,
+);
+
+$LAYOUTS: (
+  max-width: 1200px,
+  gutter: 1em,
+  section-padding: 6em,
+);
+
+$BREAKPOINTS: (
+  column: 900px,
+);
+
+$BORDERS: (
+  radius: 0,
+);
+
+$COLOR__white--dark: #eeeff7;
+
+$COLORS: (
+  primary: (
+    base: #6fba4e,
+    light: lighten(#6fba4e, 10),
+    lighter: lighten(#6fba4e, 15),
+    lightest: lighten(#6fba4e, 25),
+    dark: darken(#6fba4e, 10),
+    darker: darken(#6fba4e, 15),
+    darkest: darken(#6fba4e, 25),
+  ),
+
+  secondary: (
+    base: #4172b5,
+    light: lighten(#4172b5, 10),
+    lighter: lighten(#4172b5, 15),
+    lightest: lighten(#4172b5, 25),
+    dark: darken(#4172b5, 10),
+    darker: darken(#4172b5, 15),
+    darkest: darken(#4172b5, 25),
+  ),
+
+  black: (
+    base: #2d2e2f,
+    dark: darken(#2d2e2f, 10),
+    light: lighten(#2d2e2f, 10),
+  ),
+
+  gray: (
+    base: #a2a3a4,
+    light: lighten(#a2a3a4, 10),
+    lighter: lighten(#a2a3a4, 15),
+    dark: darken(#a2a3a4, 10),
+    darker: darken(#a2a3a4, 15),
+  ),
+
+  white: (
+    base: #fff,
+    dark: #efeff0,
+    darkest: darken(#efeff0, 5),
+  ),
+
+  success: ( base: #60c395 ),
+  error: ( base: #e33f41 ),
+  warn: ( base: #feb84d ),
+
+  inputs: (
+    base: #efeff0,
+    hover: darken(#efeff0, 5),
+  )
+);

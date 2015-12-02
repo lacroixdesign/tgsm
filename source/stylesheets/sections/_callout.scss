@@ -1,0 +1,87 @@
+.s-Callout {
+  position: relative;
+  padding: layout(section-padding) layout(gutter);
+  border-top: 4px solid color(primary);
+  border-bottom: 4px solid color(primary);
+  color: color(white);
+  text-align: center;
+
+  p {
+    font-weight: weight(bold);
+  }
+
+  .s-Callout__Overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 0;
+    background: image-url('backgrounds/bg-pattern.png');
+  }
+
+  .s-Callout__Content {
+    position: relative;
+    z-index: 300;
+    max-width: 600px;
+    padding: 4em 0;
+    margin: auto;
+  }
+
+  .s-Callout__Partners {
+    @include row;
+  }
+
+  .s-Callout__Logo {
+    @include span-columns(3);
+    @include omega(4n);
+    display: block;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  @include media(800px) {
+
+    .s-Callout__Content {
+      max-width: 800px;
+      padding: 6em 0;
+    }
+
+    p {
+      font-size: 1.25em;
+    }
+  } // @include media(800px)
+
+  @include media(1200px) {
+
+    .s-Callout__Content {
+      max-width: 1200px;
+      padding: 8em 0;
+    }
+
+    p {
+      font-size: 1.5em;
+    }
+  } // @include media(1200px)
+
+} // .s-Callout
+
+.s-Callout-1 {
+  background: linear-gradient(
+                  color(black, base, 0.5),
+                  color(black, base, 0.5)),
+              image-url('backgrounds/callout1-bg.jpg')
+              no-repeat center center fixed;
+  background-size: cover;
+}
+
+.s-Callout-2 {
+  background: linear-gradient(
+                  color(black, base, 0.5),
+                  color(black, base, 0.5)),
+              image-url('backgrounds/callout2-bg.jpg')
+              no-repeat center center fixed;
+  background-size: cover;
+}

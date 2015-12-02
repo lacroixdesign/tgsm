@@ -1,0 +1,25 @@
+.Label {
+  display: inline-block;
+  padding: 0.25rem 1rem;
+  border: 2px solid color(black);
+  border-radius: border(radius);
+  font-weight: weight(bold);
+
+  &.Danger,
+  &.Failed {
+    border-color: color(error);
+    color: color(error);
+  }
+
+  &.Success,
+  &.Complete {
+    border-color: color(success);
+    color: color(success);
+  }
+
+  &.Warn,
+  &.Pending {
+    border-color: color(warn);
+    color: color(warn);
+  }
+}

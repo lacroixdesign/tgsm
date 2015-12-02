@@ -1,0 +1,14 @@
+.Constrained {
+  max-width: layout(max-width);
+  margin-right: auto;
+  margin-left: auto;
+}
+
+
+.FloatLeft { float: left; }
+.FloatRight { float: right; }
+
+.PageGutter {
+  padding-right: layout(gutter);
+  padding-left: layout(gutter);
+}

@@ -1,0 +1,111 @@
+// Many hacks borrowed from: https://github.com/filamentgroup/select-css
+
+$select--arrow-width: 1.5rem;
+$select--arrow-height: 0.875rem;
+$select--side-margin: 0.75rem;
+
+/* Container used for styling the custom select, the buttom class below adds the bg gradient, corners, etc. */
+.Select {
+  position: relative;
+  display: inline-block;
+  max-width: 100%;
+  padding: 0;
+  margin-top: 0.5em;
+}
+
+
+/* This is the native select, we're making everything but the text invisible so we can see the button styles in the wrapper */
+.Select select {
+  width: 100%;
+  /* Prefixed box-sizing rules necessary for older browsers */
+  box-sizing: border-box;
+  padding: 0.5rem #{($select--side-margin * 2) + $select--arrow-width} 0.5rem 0.75rem;
+  margin: 0;
+  border: 2px solid color(white, darkest);
+  border-radius: border(radius);
+  background: none;
+  color: color(black);
+  /* Font size must the 16px or larger to prevent iOS page zoom on focus */
+  /* General select styles: change as needed */
+  font-family: font(sans);
+  font-size: 1rem;
+  font-weight: weight(normal);
+  outline: none;
+  /* Remove select styling */
+  appearance: none;
+}
+
+
+/* Custom arrow sits on top of the select - could be an image, SVG, icon font, etc. or the arrow could just baked into the bg image on the select. Note this si a 2x image so it will look bad in browsers that don't support background-size. In production, you'd handle this resolution switch via media query but this is a demo. */
+
+.Select::after {
+  position: absolute;
+  top: calc(50% - #{$select--arrow-height / 2});
+  right: $select--side-margin;
+  z-index: 2;
+  width: $select--arrow-width;
+  height: $select--arrow-height;
+  background-image: url(image(arrow-down));
+  background-repeat: no-repeat;
+  background-size: $select--arrow-width $select--arrow-height;
+  /* This hack make the select behind the arrow clickable in some browsers */
+  pointer-events: none;
+  content: '';
+
+  @include hidpiHelper() {
+    background-image: url(image(arrow-down, 2x));
+  }
+}
+
+
+/* Focus style */
+.Select select:focus {
+  border-color: color(primary, lightest);
+  box-shadow: inset 0 0 3px color(primary, lightest);
+  background-color: transparent;
+  color: color(black);
+  outline: none;
+}
+
+/* Set options to normal weight */
+.Select option {
+  font-weight: normal;
+}
+
+
+
+
+
+
+/* ------------------------------------  */
+/* START OF UGLY BROWSER-SPECIFIC HACKS */
+/* ----------------------------------  */
+
+/* OPERA - Pre-Blink nix the custom arrow, go with a native select button to keep it simple. Targeted via this hack http://browserhacks.com/#hack-a3f166304aafed524566bc6814e1d5c7 */
+x:-o-prefocus,
+.Select::after {
+  display: none;
+}
+
+ /* IE 10/11+ - This hides native dropdown button arrow so it will have the custom appearance, IE 9 and earlier get a native select - targeting media query hack via http://browserhacks.com/#hack-28f493d247a12ab654f6c3637f6978d5 - looking for better ways to achieve this targeting */
+/* The second rule removes the odd blue bg color behind the text in the select button in IE 10/11 and sets the text color to match the focus style's - fix via http://stackoverflow.com/questions/17553300/change-ie-background-color-on-unopened-focused-select-box */
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .Select select::-ms-expand {
+    display: none;
+  }
+
+  .Select select:focus::-ms-value {
+    background: transparent;
+    color: #222;
+  }
+}
+
+/* Firefox focus has odd artifacts around the text, this kills that. See https://developer.mozilla.org/en-US/docs/Web/CSS/:-moz-focusring */
+.Select select:-moz-focusring {
+  color: transparent;
+  text-shadow: 0 0 0 #000;
+}
+
+/* ------------------------------------  */
+/*  END OF UGLY BROWSER-SPECIFIC HACKS  */
+/* ------------------------------------  */
