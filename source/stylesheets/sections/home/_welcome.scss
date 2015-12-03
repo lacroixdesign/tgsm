@@ -55,6 +55,15 @@
     font-size: 0.75em;
   }
 
+  .s-HomeWelcome__More {
+    position: absolute;
+    right: 0;
+    bottom: 0.5em;
+    left: 0;
+    z-index: 200;
+    font-size: 2em;
+  }
+
   @include media(600px) {
 
     .s-HomeWelcome__Content {
