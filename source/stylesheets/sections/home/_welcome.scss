@@ -8,7 +8,8 @@
                   color(black, base, 0),
                   color(black, base, 0.5)),
               image-url('backgrounds/welcome-bg.jpg')
-              no-repeat center center fixed;
+              no-repeat;
+  background-position: center;
   background-size: cover;
   text-align: center;
 
@@ -33,14 +34,12 @@
     max-width: 400px;
     padding: 37.5vh 0;
     margin: auto;
-    // background: color(black, base, 0.75);
   }
 
   @include media(600px) {
 
     .s-HomeWelcome__Content {
       max-width: 600px;
-      // padding: 12em 0;
     }
 
     h1 {
@@ -49,10 +48,11 @@
   } // @include media(600px)
 
   @include media(800px) {
+    background-attachment: fixed;
+
 
     .s-HomeWelcome__Content {
       max-width: 800px;
-      // padding: 12em 0;
     }
 
     h1 {
@@ -61,10 +61,10 @@
   } // @include media(800px)
 
   @include media(1200px) {
+    background-attachment: fixed;
 
     .s-HomeWelcome__Content {
       max-width: 1200px;
-      // padding: 18em 0;
     }
 
     h1 {

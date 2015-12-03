@@ -73,15 +73,25 @@
                   color(black, base, 0.5),
                   color(black, base, 0.5)),
               image-url('backgrounds/callout1-bg.jpg')
-              no-repeat center center fixed;
+              no-repeat;
+  background-position: center;
   background-size: cover;
-}
+
+  @include media(800px) {
+    background-attachment: fixed;
+  }
+} // .s-Callout-1
 
 .s-Callout-2 {
   background: linear-gradient(
                   color(black, base, 0.5),
                   color(black, base, 0.5)),
               image-url('backgrounds/callout2-bg.jpg')
-              no-repeat center center fixed;
+              no-repeat;
+  background-position: center;
   background-size: cover;
-}
+
+  @include media(800px) {
+    background-attachment: fixed;
+  }
+} // .s-Callout-2 
