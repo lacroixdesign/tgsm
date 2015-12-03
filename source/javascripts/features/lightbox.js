@@ -1,5 +1,5 @@
 $(function() {
 
-	$('.swipebox-video').swipebox();
+	$('.swipebox-video').swipebox({autoplayVideos: true});
 
 });
