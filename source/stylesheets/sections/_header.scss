@@ -9,7 +9,14 @@
 
   .s-Header__Logo {
     float: left;
-    width: 7.5em;
+    width: 4em;
   }
+
+  @include media(800px) {
+    .s-Header__Logo {
+      width: 8em;
+    }
+
+  } // @include media(800px)
 
 } // .s-header
