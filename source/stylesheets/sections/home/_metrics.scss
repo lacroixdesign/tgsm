@@ -14,7 +14,7 @@
     position: relative;
     padding: 0.25em 0;
     margin-bottom: 0.5em;
-    background: color(secondary, base);
+    background: color(primary, dark);
     color: color(white, base);
     font-family: font(condensed);
     font-size: 8em;
@@ -28,7 +28,7 @@
       width: 0;
       height: 0;
       margin: 0 auto;
-      border-top: solid 0.25em color(secondary, base);
+      border-top: solid 0.25em color(primary, dark);
       border-right: solid 0.25em transparent;
       border-left: solid 0.25em transparent;
       content: '';
