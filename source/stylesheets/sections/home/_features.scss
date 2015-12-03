@@ -3,7 +3,7 @@
 
   ul {
     padding: 0;
-    margin: 1em 0 0;
+    margin: 0;
   }
 
   li {
@@ -24,7 +24,11 @@
   }
 
   .s-HomeFeatures__Feature {
-    padding-top: 3em;
+    padding-bottom: 2em;
+    margin-top: 3em;
+    border: 2px solid color(primary, lightest);
+    border-bottom-right-radius: 16px;
+    border-bottom-left-radius: 16px;
   }
 
   .s-HomeFeatures__Introduction {

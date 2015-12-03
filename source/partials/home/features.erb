@@ -8,10 +8,10 @@
   <div class="s-HomeFeatures__Showcase">
     <% data.features.each do |featurelist| %>
       <div class="s-HomeFeatures__Feature">
-        <h2><%= featurelist.title %></h2>
         <div class="s-HomeFeatures__FeatureImage">
           <img src="<%= featurelist.image %>">
         </div>
+        <h2><%= featurelist.title %></h2>
         <ul>
           <% featurelist.features.each do |feature| %>
             <li>
