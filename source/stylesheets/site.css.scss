@@ -6,12 +6,14 @@
 @import 'config';
 @import 'font-awesome';
 
+// Vendor
+@import 'vendor/animate.min';
+@import 'vendor/swipebox';
+
 // Utilities
 @import 'util/getters';
 @import 'util/helpers';
 @import 'util/datauri';
-@import 'util/swipebox';
-@import 'util/animate';
 
 // Elements
 @import 'elements/document';

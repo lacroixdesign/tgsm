@@ -4,11 +4,11 @@
   <div class="s-HomeMetrics__Highlights Constrained">
     <% data.metrics.each do |metric| %>
       <div class="s-HomeMetrics__IndividualHighlight">
-        <p class="s-HomeMetrics__Percentage">
+        <p class="s-HomeMetrics__Percentage wow flipInX">
           <%= metric.percentage %>
         </p>
-        <h4><%= metric.title %></h4>
-        <p>
+        <h4 class="wow bounceIn"><%= metric.title %></h4>
+        <p class="wow bounceIn">
           <%= metric.description %>
         </p>
       </div>

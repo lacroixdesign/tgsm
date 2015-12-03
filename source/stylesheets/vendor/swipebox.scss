@@ -149,7 +149,7 @@ html.swipebox-html.swipebox-touch {
 	border: none!important;
 	text-decoration: none!important;
 	cursor: pointer;
-	//position: absolute;
+	position: absolute;
 	width: 50px;
 	height: 50px;
 	top: 0;
@@ -284,7 +284,7 @@ html.swipebox-html.swipebox-touch {
 /* Skin
 --------------------------*/
 #swipebox-overlay {
-	background: #0d0d0d;
+	background: rgba(0,0,0, 0.5);
 }
 
 #swipebox-bottom-bar,
