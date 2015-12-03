@@ -24,3 +24,6 @@ gem 'bourbon'
 
 # Grid System
 gem 'neat'
+
+# Icon Fonts
+gem 'font-awesome-sass'

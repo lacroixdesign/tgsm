@@ -12,5 +12,10 @@ a {
 }
 
 a:hover {
+  color: color(primary, dark);
   text-decoration: underline;
+}
+
+a:active {
+  color: color(primary, darker);
 }

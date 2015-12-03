@@ -43,6 +43,8 @@ GEM
     eventmachine (1.0.8)
     execjs (2.6.0)
     ffi (1.9.10)
+    font-awesome-sass (4.4.0)
+      sass (>= 3.2)
     haml (4.0.7)
       tilt
     highline (1.7.8)
@@ -157,6 +159,7 @@ PLATFORMS
 
 DEPENDENCIES
   bourbon
+  font-awesome-sass
   highline
   middleman (~> 3.4.0)
   middleman-autoprefixer
