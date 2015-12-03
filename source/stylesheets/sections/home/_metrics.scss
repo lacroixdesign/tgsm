@@ -8,12 +8,13 @@
 
   .s-HomeMetrics__Highlights {
     @include row;
+    padding-top: 4em;
   }
 
   .s-HomeMetrics__Percentage {
     position: relative;
     padding: 0.25em 0;
-    margin-bottom: 0.25em;
+    margin-bottom: 0.5em;
     background: color(secondary, base);
     color: color(white, base);
     font-family: font(condensed);
