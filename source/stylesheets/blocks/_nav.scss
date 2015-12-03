@@ -1,6 +1,5 @@
 .b-Nav {
   float: right;
-  padding-top: 1em;
   font-family: font(condensed);
   font-size: 1.5em;
   font-weight: weight(semibold);
@@ -9,21 +8,65 @@
 
   a {
     color: white;
+    text-decoration: none;
 
-    &:hover { color: color(primary, lighter); }
+    &:hover {
+      color: color(primary, lighter);
+      text-decoration: none;
+    }
 
     &:active { color: color(primary, light); }
   } // a
 
   ul {
-    padding: 0;
+    padding: 0.5em;
     margin: 0;
+    background: color(primary, dark, 0.75);
     list-style: none;
   }
 
-  li {
-    display: inline-block;
-    padding-left: 1em;
+  &.b-Nav__Hide {
+    display: none;
   }
 
+  @include media(800px) {
+
+    ul {
+      background: none;
+    }
+
+    li {
+      display: inline-block;
+      padding-left: 1em;
+    }
+
+    &.b-Nav__Hide {
+      display: block;
+    }
+  } // @include media(800px)
+
 } // .b-Nav
+
+
+.b-Nav__Toggle {
+  color: color(white, base);
+  font-size: 1.5em;
+  text-align: right;
+
+  &:hover { color: color(primary, lighter); }
+
+  &:active { color: color(primary, light); }
+
+  i {
+    padding: 0.25em;
+  }
+
+  @include media(800px) {
+    display: none;
+  } // @include media(800px)
+
+} // .b-Nav__Toggle
+
+.b-Nav__Active i {
+  background: color(primary, dark, 0.75);
+}
