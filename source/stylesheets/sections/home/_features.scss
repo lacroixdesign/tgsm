@@ -2,25 +2,25 @@
   padding: layout(section-padding) layout(gutter);
 
   ul {
-    margin: 0;
     padding: 0;
+    margin: 1em 0 0;
   }
 
   li {
-    padding: 0.5em 0;
-    margin: 0.5em;
     list-style: none;
 
     &:after {
-      content: "";
-      width: 25%;
-      margin: auto;
-      border-bottom: 1px solid color(white, darkest);
+      display: block;
+      width: 50%;
+      height: 1px;
+      margin: 1em auto;
+      background: color(white, dark);
+      content: '';
     }
 
-    // &:last-of-type {
-    //   border: 0;
-    // }
+    &:last-of-type:after {
+      display: none;
+    }
   }
 
   .s-HomeFeatures__Showcase {
