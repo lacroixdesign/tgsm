@@ -29,6 +29,10 @@
     border: 2px solid color(primary, lightest);
     border-bottom-right-radius: 16px;
     border-bottom-left-radius: 16px;
+
+    &:hover {
+      box-shadow: 0 0 8px color(primary, base, 0.5);
+    }
   }
 
   .s-HomeFeatures__Introduction {

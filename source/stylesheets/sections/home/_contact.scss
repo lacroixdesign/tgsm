@@ -20,11 +20,4 @@
     width: 100%;
   }
 
-  @include media(1200px) {
-
-    .s-HomeContact__Form {
-      max-width: 800px;
-    }
-  } // @include media(800px)
-
 } // .s-HomeContact

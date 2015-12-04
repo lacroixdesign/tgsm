@@ -26,7 +26,7 @@
     position: relative;
     z-index: 300;
     max-width: 600px;
-    padding: 4em 0;
+    padding: 3em 0;
     margin: auto;
   }
 
@@ -97,3 +97,31 @@
     background-attachment: fixed;
   }
 } // .s-Callout-2
+
+.s-Callout-3 {
+  background: linear-gradient(
+                  color(black, base, 0.5),
+                  color(black, base, 0.5)),
+              image-url('backgrounds/callout3-bg.jpg')
+              no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  @include media(800px) {
+    background-attachment: fixed;
+  }
+} // .s-Callout-3
+
+.s-Callout-4 {
+  background: linear-gradient(
+                  color(black, base, 0.5),
+                  color(black, base, 0.5)),
+              image-url('backgrounds/callout4-bg.jpg')
+              no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  @include media(800px) {
+    background-attachment: fixed;
+  }
+} // .s-Callout-4
