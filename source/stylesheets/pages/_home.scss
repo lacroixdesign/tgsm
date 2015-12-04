@@ -1,3 +1,31 @@
 .p-Home {
   text-align: center;
+
+  .p-Home__Title {
+    position: relative;
+    display: inline-block;
+    margin: 0 auto 0.5em;
+    padding: 0.25em 0.5em 0.375em;
+    border: 4px solid color(primary, base);
+    color: color(primary, base);
+
+    &:before {
+      content: " ";
+      position: absolute;
+      z-index: 0;
+      top: 4px;
+      left: 4px;
+      right: 4px;
+      bottom: 4px;
+      border: 2px solid color(primary, base);
+    }
+  } // .p-Home__Title
+
+  @include media(1200px) {
+
+    .p-Home__Title {
+      font-size: 3.25em;
+    }
+  } // @include media(1200px)
+
 } // .p-Home

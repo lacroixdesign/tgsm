@@ -21,12 +21,9 @@
   }
 
   @include media(1200px) {
-    @include row;
 
     .s-HomeContact__Form {
-      @include span-columns(6);
-      @include shift(3);
-      max-width: none;
+      max-width: 800px;
     }
   } // @include media(800px)
 
