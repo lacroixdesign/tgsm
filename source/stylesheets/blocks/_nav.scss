@@ -1,5 +1,6 @@
 .b-Nav {
-  float: right;
+  position: relative;
+  z-index: 500;
   font-family: font(condensed);
   font-size: 1.5em;
   font-weight: weight(semibold);
@@ -21,7 +22,7 @@
   ul {
     padding: 0.5em;
     margin: 0;
-    background: color(primary, dark, 0.75);
+    background: color(primary, dark);
     list-style: none;
   }
 
@@ -50,7 +51,7 @@
 
 .b-Nav__Toggle {
   color: color(white, base);
-  font-size: 1.5em;
+  font-size: 2em;
   text-align: right;
 
   &:hover { color: color(primary, lighter); }
@@ -68,5 +69,6 @@
 } // .b-Nav__Toggle
 
 .b-Nav__Active i {
-  background: color(primary, dark, 0.75);
+  padding-bottom: 0.25em;
+  background: color(primary, dark);
 }

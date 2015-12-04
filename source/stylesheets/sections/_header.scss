@@ -1,15 +1,14 @@
 .s-Header {
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
   left: 0;
   z-index: 400;
-  padding-top: 1em;
-  padding-bottom: 1em;
+  padding: 0.25em 1em;
 
   .s-Header__Logo {
     float: left;
-    width: 5em;
+    width: 6em;
   }
 
   @include media(800px) {
@@ -20,3 +19,20 @@
   } // @include media(800px)
 
 } // .s-header
+
+.HeaderScroll {
+  background: color(black, base, 0.75);
+  transition: 1s;
+
+  .s-Header__Logo {
+    width: 4em;
+    transition: 1s;
+  }
+
+  @include media(800px) {
+    .s-Header__Logo {
+      width: 6em;
+    }
+
+  } // @include media(800px)
+}
