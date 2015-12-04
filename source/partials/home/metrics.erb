@@ -5,7 +5,7 @@
     <% data.metrics.each do |metric| %>
       <div class="s-HomeMetrics__IndividualHighlight">
         <p class="s-HomeMetrics__Percentage wow flipInX">
-          <span class="CountTo" data-from="0" data-to="<%= metric.percentage %>">
+          <span class="CountTo" data-from="0" data-to="<%= metric.percentage %>" data-speed="1600">
             <%= metric.percentage %>
           </span>
           %
