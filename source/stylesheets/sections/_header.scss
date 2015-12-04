@@ -9,12 +9,12 @@
 
   .s-Header__Logo {
     float: left;
-    width: 4em;
+    width: 5em;
   }
 
   @include media(800px) {
     .s-Header__Logo {
-      width: 8em;
+      width: 10em;
     }
 
   } // @include media(800px)
