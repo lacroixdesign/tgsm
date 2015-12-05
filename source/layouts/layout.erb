@@ -11,11 +11,11 @@
     <!-- Use title if it's in the page YAML frontmatter -->
     <title><%= current_page.data.title || "The Middleman" %></title>
 
+    <%= stylesheet_link_tag :site %>
+
     <!-- Typekit -->
     <script src="https://use.typekit.net/sdk3ewe.js"></script>
     <script>try{Typekit.load({ async: true });}catch(e){}</script>
-
-     <%= stylesheet_link_tag :site %>
   </head>
 
   <body class="<%= page_classes %>">

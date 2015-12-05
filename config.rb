@@ -74,7 +74,7 @@ configure :build do
   activate :minify_html
 
   # Enable cache buster
-  activate :asset_hash
+  activate :asset_hash, ignore: 'images/lightbox/*'
   activate :gzip
 
   # Use relative URLs
