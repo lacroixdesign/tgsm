@@ -10,14 +10,14 @@
     color: color(primary, base);
 
     &:before {
-      content: " ";
       position: absolute;
-      z-index: 0;
       top: 4px;
-      left: 4px;
       right: 4px;
       bottom: 4px;
+      left: 4px;
+      z-index: 0;
       border: 2px solid color(primary, base);
+      content: "";
     }
   } // .p-Home__Title
 

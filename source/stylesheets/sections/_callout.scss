@@ -9,6 +9,7 @@
   p {
     max-width: 800px;
     margin: auto;
+    font-size: 1.25em;
     font-weight: weight(bold);
   }
 
@@ -52,7 +53,7 @@
     }
 
     p {
-      font-size: 1.25em;
+      font-size: 1.5em;
     }
   } // @include media(800px)
 
@@ -64,7 +65,7 @@
     }
 
     p {
-      font-size: 1.5em;
+      font-size: 2em;
     }
   } // @include media(1200px)
 
