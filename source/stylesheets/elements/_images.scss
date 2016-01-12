@@ -1,6 +1,11 @@
 img {
-  max-width: 100%;
+  width: 100%;
   height: auto;
+}
+
+img[src*="//code.visitor-track.com"] {
+  bottom: 0;
+  left: -10px;
 }
 
 .Icon {
