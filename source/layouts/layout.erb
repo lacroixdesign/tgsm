@@ -26,8 +26,8 @@
 
       ga('create', 'UA-17878987-3', 'auto');
       ga('send', 'pageview');
-
     </script>
+
   </head>
 
   <body class="<%= page_classes %>">
@@ -38,5 +38,10 @@
     <%= partial "layouts/footer" %>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <%= javascript_include_tag :all %>
+    <!-- VisitorTrack -->
+    <script type="text/javascript">
+      vtid = 109116;
+      document.write(unescape("%3Cscript src='" + document.location.protocol + "//code.visitor-track.com/VisitorTrack.js' type='text/javascript'%3E%3C/script%3E"));
+    </script>
   </body>
 </html>
