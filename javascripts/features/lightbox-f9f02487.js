@@ -1,0 +1,1 @@
+$(function(){$(".swipebox").swipebox({autoplayVideos:!0,hideCloseButtonOnMobile:!1})}),$(function(){$(document.body).on("click touchend","#swipebox-slider .current img",function(o){return!1}).on("click touchend","#swipebox-slider .current",function(o){$("#swipebox-close").trigger("click")})});
