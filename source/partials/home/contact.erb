@@ -1,6 +1,9 @@
 <section id="contact" class="s-HomeContact">
   <h1 class="p-Home__Title wow pulse">Contact Us</h1>
-  <form class="s-HomeContact__Form wow fadeIn">
+  <form action="//formspree.io/info@tailgatingsportsmarketing.com"
+      method="POST"  class="s-HomeContact__Form wow fadeIn">
+      <input type="hidden" name="_cc" value="prt@tbgdm.com" />
+      <input type="hidden" name="_subject" value="New Contact Form Submission" />
 
     <div class="Field">
       <label for="demo--first-name">First Name</label>
@@ -14,7 +17,7 @@
 
     <div class="Field">
       <label for="demo--email">Email Address</label>
-      <input id="demo--email" type="email" name="email" placeholder="Email Address">
+      <input id="demo--email" type="email" name="_replyto" placeholder="Email Address">
     </div>
 
     <div class="Field">
@@ -22,6 +25,6 @@
       <textarea name="message" placeholder="Your Message" id="textArea" cols="30" rows="10"></textarea>
     </div>
 
-    <button type="submit" class="Button Large Primary wow bounceIn">Send Your Message</button>
+    <button type="submit" value="Send" class="Button Large Primary wow bounceIn">Send Your Message</button>
   </form>
 </section>
